@@ -1,0 +1,90 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mockups",
+  "info": {
+    "singularName": "mockup",
+    "pluralName": "mockups",
+    "displayName": "Mockup",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Glb": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "HDR": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "HdrAngle": {
+      "type": "integer"
+    },
+    "videoPreview": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "staticPreview": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "animation_types": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::animation-type.animation-type",
+      "mappedBy": "mockup"
+    },
+    "mockup_types": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::mockup-type.mockup-type",
+      "mappedBy": "mockup"
+    },
+    "mockup_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::mockup-category.mockup-category",
+      "mappedBy": "mockup"
+    },
+    "json": {
+      "type": "json"
+    }
+  }
+}

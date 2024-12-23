@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mockup_categories",
+  "info": {
+    "singularName": "mockup-category",
+    "pluralName": "mockup-categories",
+    "displayName": "Mockup Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "mockup": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::mockup.mockup",
+      "inversedBy": "mockup_categories"
+    }
+  }
+}

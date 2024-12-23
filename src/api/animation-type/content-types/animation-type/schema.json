@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "animation_types",
+  "info": {
+    "singularName": "animation-type",
+    "pluralName": "animation-types",
+    "displayName": "Animation Type"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "mockup": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::mockup.mockup",
+      "inversedBy": "animation_types"
+    }
+  }
+}
